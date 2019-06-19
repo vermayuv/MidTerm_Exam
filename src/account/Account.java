@@ -50,7 +50,7 @@ public class Account {
      */
         public double getBalance() 
         {System.out.println("enter the amount:");
-        this.balance = sc.nextDouble();
+        balance = sc.nextDouble();
         return balance;
         }
 

@@ -20,6 +20,7 @@ public class AccountTester {
 
         
         System.out.println("Please enter the unique user name:");
+        
         String user=sc.nextLine();
        /* System.out.println("Please enter the amount by which you want to open an account:");
         
