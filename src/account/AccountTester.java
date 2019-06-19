@@ -15,20 +15,23 @@ public class AccountTester {
         /*here assumed that 500 accounts can be created
         for the given bank*/
         Account ac[]=new Account[500];
-        
-        System.out.println("Please enter the amount by which you want to open an account:");
-        
-        Scanner sc=new Scanner(System.in);
-        double bal=sc.nextDouble();
+        Account acc = new Account();
+                Scanner sc=new Scanner(System.in);
+
         
         System.out.println("Please enter the unique user name:");
         sc.nextLine();
         String user=sc.nextLine();
+        System.out.println("Please enter the amount by which you want to open an account:");
+        
+        double bal=sc.nextDouble();
+        acc.repeat();
         
         Account a=new Account(bal,user);
         ac[0]=a;
              
         System.out.println("The balance is: "+a.getBalance());  
         System.out.println("The InterestRate per month is "+a.getInterestRate());
+         acc.calculate();
     }
 }

@@ -15,10 +15,11 @@ public class Account {
         private double balance;
         private double interestRate=0.23;
         private String user;
- 
+        private double total;
      /**constructor that takes the initial balance
       * @param initialBalance 
       */
+        public Account(){};
         public Account(double initialBalance,String givenUser)
         {
             balance=initialBalance;
@@ -56,13 +57,28 @@ public class Account {
         {
             return interestRate;
         }
-
+        public void setBalance(double bal){
+            if(balance <50 ){
+                System.out.println("account can not be created");
+            }
+            else 
+            {
+                this.balance = bal;
+                
+            }
+        }
     /**user is the read only field
      * @return the user
      */
     public String getUser() {
         return user;
     }
+    public void calculate(){
+        total = balance + (balance * interestRate);
+        System.out.println("the total balnace is "+total);
+    }
     
-    
+    public void repeat(){
+       
+    }
 }//class end
