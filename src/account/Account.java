@@ -5,6 +5,8 @@
  */
 package account;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Sivagama
@@ -16,6 +18,7 @@ public class Account {
         private double interestRate=0.23;
         private String user;
         private double total;
+        Scanner sc=new Scanner(System.in);
      /**constructor that takes the initial balance
       * @param initialBalance 
       */
@@ -46,7 +49,8 @@ public class Account {
      * @return the balance
      */
         public double getBalance() 
-        {
+        {System.out.println("enter the amount:");
+        this.balance = sc.nextDouble();
         return balance;
         }
 
@@ -73,12 +77,16 @@ public class Account {
     public String getUser() {
         return user;
     }
-    public void calculate(){
+    public void calculate(double balance,double interestRate){
         total = balance + (balance * interestRate);
         System.out.println("the total balnace is "+total);
     }
     
     public void repeat(){
+        do{
+            getBalance();
+            setBalance(balance);
+        }while(balance<50);
        
     }
 }//class end
